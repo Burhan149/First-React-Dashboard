@@ -1,16 +1,16 @@
+
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-// import '../../index.css';
-import "../index.css";
+import '../../index.css';
 import { LogIn, Menu, Settings } from "react-feather";
 import { Offcanvas } from "react-bootstrap";
 import { useState } from "react";
-import SideNav from "./Navbar";
-import { myStyle } from "./Styleconfig";
+import NavMenu from "../Navbar";
+import { myStyle } from "../Styleconfig";
 
-const App = ({ children }) => {
+const Layout = ({ children }) => {
   // Offcanvas
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
@@ -22,7 +22,7 @@ const App = ({ children }) => {
         <Row>
           {/* Sidebar */}
           <Col className="d-none d-md-block side-bar">
-            <SideNav />
+            <NavMenu />
           </Col>
 
           {/* Login */}
@@ -87,4 +87,4 @@ const App = ({ children }) => {
   );
 };
 
-export default App;
+export default Layout;

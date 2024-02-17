@@ -21,9 +21,14 @@ code {
 .login-signup{
   min-height: 100vh;
   margin-left: 200px;
+ 
 }
 .icons-menu{
  
   justify-content: space-between;
   align-items: center;
+}
+.main-title{
+  font-size: 1.75rem;
+    font-weight: bold;
 }
