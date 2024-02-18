@@ -1,9 +1,8 @@
-
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import '../../index.css';
+import "../../index.css";
 import { LogIn, Menu, Settings } from "react-feather";
 import { Offcanvas } from "react-bootstrap";
 import { useState } from "react";
@@ -33,7 +32,7 @@ const Layout = ({ children }) => {
             {/* Header */}
             <Row className="m-2 ">
               <Col
-                className=" p-3  rounded "
+                className=" p-3  rounded header-sticky"
                 style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
               >
                 <div className="d-flex icons-menu ">
@@ -66,21 +65,18 @@ const Layout = ({ children }) => {
 
             {/* content */}
             <Row>
-              <Col className="p-2 rounded m-3 ">
-                  {children}
-              </Col>
+              <Col className="p-2 rounded m-3 ">{children}</Col>
             </Row>
           </Col>
         </Row>
       </Container>
 
-      <Offcanvas show={show} onHide={handleClose}>
+      <Offcanvas show={show} onHide={handleClose} style={{width : '60%'}}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Offcanvas</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+          <NavMenu />
         </Offcanvas.Body>
       </Offcanvas>
     </>

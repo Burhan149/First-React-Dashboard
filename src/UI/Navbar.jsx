@@ -1,5 +1,12 @@
 import React from "react";
-import { Archive, Codepen, Database, Home, Pocket, Printer, User } from "react-feather";
+import {
+  Archive,
+  Codepen,
+  Home,
+  Pocket,
+  Printer,
+  User,
+} from "react-feather";
 import { myStyle } from "./Styleconfig";
 import { Link } from "react-router-dom";
 const NavMenu = () => {
@@ -13,7 +20,7 @@ const NavMenu = () => {
         {" "}
         <Home size={20} color="grey" /> <Link to="/">Home</Link>
       </span>
-      
+
       <span className={`${myStyle.FlexStart} nav-links my-2`}>
         {" "}
         <User size={20} color="grey" /> <Link to="/profile">Profile</Link>

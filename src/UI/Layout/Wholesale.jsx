@@ -1,10 +1,25 @@
 import React from 'react'
 import Layout from './Index'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import blog from '../../images/blog.jpg';
 
 const Wholesale = () => {
   return (
     <div>
-      <Layout>Wholesale page</Layout>
+      <Layout>Wholesale page
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={blog} />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+      </Layout>
     </div>
   )
 }
